@@ -11,7 +11,7 @@
     <div class="header"></div>
     <div class="content">
         <div v-bind:class="`notes ${v.theme} ${i==moveEvent.index?'active':''}`" v-for="(v,i) in list" :style="{top:v.top+'px',left:v.left+'px'}" :key="v.id">
-            <div class="title" @mousedown="md(i,$event)">{{v.title}}
+            <div class="title" @mousedown.stop="md(i,$event)">{{v.title}}
                 <div class="delete" @click="del(i)"></div>
             </div>
             <div class="content">

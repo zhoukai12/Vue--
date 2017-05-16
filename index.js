@@ -50,6 +50,7 @@ var app=new Vue({
             localStorage.list=JSON.stringify(this.list);
         },
         del:function(i){
+            //alert(i);
             this.list.splice(i,1);
             this.save();
         }
