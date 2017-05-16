@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: #eee;
+    overflow: hidden;
+}
+.header{
+    height: 80px;
+    background: #000;
+}
+.content{
+    position: relative;
+}
+#el{
+    height: 100%;
+}
+.notes{
+    width: 240px;
+    border: 1px solid indianred;
+    position: absolute;
+    top: 30px;
+    left: 120px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.notes.red{
+    border: 1px solid red;
+}
+.notes.green{
+    border: 1px solid green;
+}
+.notes.blue{
+    border: 1px solid blue;
+}
+.notes.yellow{
+    border: 1px solid yellow;
+}
+.notes.red .title{
+    background: red;
+}
+.notes.green .title{
+    background: green;
+}
+.notes.yellow .title{
+    background: yellow;
+}
+.notes.blue .title{
+    background: blue;
+}
+.title{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 40px;
+    background: red;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+.notes .content{
+   min-height: 300px;
+    padding: 15px;
+    background: #fff;
+}
+.notes textarea{
+    width: 100%;
+    min-height: 200px;
+    outline: none;
+    resize: none;
+    border: none;
+}
+.delete{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top:20px;
+    right: 0;
+    background: #000000;
+}
+.active{
+    z-index:100;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}

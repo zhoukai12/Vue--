@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="el" v-on:dblclick="addNote" @mouseup="mu" @mousemove="mv">
+    <div class="header"></div>
+    <div class="content">
+        <div v-bind:class="`notes ${v.theme} ${i==moveEvent.index?'active':''}`" v-for="(v,i) in list" :style="{top:v.top+'px',left:v.left+'px'}" :key="v.id">
+            <div class="title" @mousedown="md(i,$event)">{{v.title}}
+                <div class="delete" @click="del(i)"></div>
+            </div>
+            <div class="content">
+                <textarea @keyup.stop name="" id="" @blur="save" v-model="v.content">
+                        {{v.content}}
+                </textarea>
+                </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="./index.js"></script>
